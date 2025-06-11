@@ -1,5 +1,5 @@
 import Order from '@/components/order';
-import { fetchOrders, fetchProductOrder, fetchProductOrders } from '@/lib/axios';
+import { fetchOrders, fetchProductOrders } from '@/lib/axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ function Orders() {
   const [productOrders, setProductOrders] = useState([]);
   
     useEffect(() => {
-      fetchProductOrders()
+      fetchOrders()
         .then((data) => setProductOrders(data))
         .catch((error) => {
           console.error("Erro ao buscar pedidos:", error);
@@ -24,7 +24,7 @@ function Orders() {
         <div className="flex flex-col justify-start items-center border border-gray-400 rounded-lg min-h-[50vh]">
           {productOrders &&
             productOrders.map((order) => (
-              <Order key={order.order_id} productOrderId={order.product_order_id}/>
+              <Order key={order.order_id} orderId={order.order_id}/>
             ))}
         </div>
       </div>

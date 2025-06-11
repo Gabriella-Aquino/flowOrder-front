@@ -14,7 +14,6 @@ function Home() {
       });
   }, []);
 
-  console.log(clients)
 
   return (
     <div className="w-[90%] mx-auto mt-10">

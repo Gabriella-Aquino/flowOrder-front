@@ -14,8 +14,7 @@ function Products() {
       });
   }, []);
 
-  console.log(products)
-
+  
   return (
     <div className="w-[90%] mx-auto mt-10">
       <div className="flex w-full justify-between items-center mb-5">
