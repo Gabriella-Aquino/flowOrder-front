@@ -5,6 +5,7 @@ import Products from "./pages/Products";
 import ClientForm from "./pages/cliente-form";
 import ProductForm from "./pages/product-form";
 import Orders from "./pages/orders";
+import OrderForm from "./pages/order-form";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cliente/create" element = {<ClientForm/>}/>
         <Route path="/produtos/create" element = {<ProductForm/>}/>
         <Route path="/pedidos/" element = {<Orders/>}/>
+        <Route path="/pedidos/create" element = {<OrderForm/>}/>
       </Routes>
     </BrowserRouter>
   );

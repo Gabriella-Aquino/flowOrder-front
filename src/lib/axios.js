@@ -91,6 +91,16 @@ export const fetchOrder = (id) => {
   });
 };
 
+export const createOrder = (data) => {
+  return OrderApi
+  .post("orders/", data)
+  .then((res) => res.data)
+  .catch((err) => {
+    console.error("Erro ao criar pedido: ", err);
+    throw err;
+  });
+}
+
 // product-orders
 export const fetchProductOrders = () => {
   return OrderApi
